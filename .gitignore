@@ -16,3 +16,102 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+---
+
+## 3️⃣ .gitignore
+
+```gitignore
+# ════════════════════════════════════════════════════════════════
+# 🚫 .gitignore — NexusCinema
+# Auteur : Aissa Mohammedi (DGK) | Version : 1.0.0
+# ════════════════════════════════════════════════════════════════
+
+# ── Logs (runtime, jamais versionnés) ───────────────────────────
+logs/
+*.log
+*.log.*
+debug/
+crash/
+
+# ── État runtime (change à chaque session) ──────────────────────
+# On garde la structure, pas le contenu.
+state/*
+!state/.gitkeep
+!state/preferences.example.json
+state/session.json
+state/cache/
+state/tmp/
+*.state
+*.session
+
+# ── Données générées / caches ───────────────────────────────────
+data/cache/
+data/generated/
+data/thumbs/
+*.tmp
+*.temp
+*.bak
+*.old
+*.pid
+
+# ── Frames générées (les sources sont versionnées) ──────────────
+frames/rendered/
+frames/export/
+frames/cache/
+*.mp4
+*.webm
+*.gif
+
+# ── Secrets & configs locales ───────────────────────────────────
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.yaml
+config.local.*
+secrets/
+credentials.json
+
+# ── Python ──────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Node (si scripts JS) ────────────────────────────────────────
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ── Builds ──────────────────────────────────────────────────────
+dist/
+build/
+out/
+target/
+*.tsbuildinfo
+coverage/
+
+# ── Éditeurs & IDE ──────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+# ── OS ──────────────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
